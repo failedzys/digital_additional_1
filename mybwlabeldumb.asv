@@ -1,6 +1,24 @@
-function [ Ans ] = mybwlabeldumb( bwmap )
+function [ Ans ] = mybwlabeldumb( bwmap ,conX)
 [n,m] = size(bwmap);
-
+Chg = [1 0; 0 1; -1 0; 0 -1; 1 1; 1 -1; -1 1; -1 -1];
+Flag = uint8(zeros(n,m));
+Queue = uint8(zeors(n*m,2));
+cnt = 1;
+for ii = 1 : n
+    for jj = 1 : m
+        if (bwmap(ii,jj) == 1 && Flag(ii,jj) == 0)
+            cnt = cnt+1;
+            Queue(1,1) = ii;
+            Queue(1,1) = jj;
+            Now = 1;
+            Sum = 1;
+            while Now <= Sum
+                for kk = 1 : conX
+                    if (Queue(Now,1) + Chg(kk,1) <= n && Queue(Now,1) + Chg(kk,1) >= 1 && Queue(Now,2) + Chg(kk,2) <= m && Queue(Now,2) + Chg(kk) <= n && 
+            end
+        end
+    end
+end
 
 end
 
