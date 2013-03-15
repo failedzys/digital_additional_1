@@ -2,8 +2,8 @@ function [ Ans ] = mybwlabeldumb( bwmap ,conX)
 [n,m] = size(bwmap);
 Chg = [1 0; 0 1; -1 0; 0 -1; 1 1; 1 -1; -1 1; -1 -1];
 Ans = uint32(zeros(n,m));
-Queue = uint32(zeors(n*m,2));
-cnt = uint32(1);
+Queue = uint32(zeros(n*m,2));
+cnt = uint32(0);
 for ii = 1 : n
     for jj = 1 : m
         if (bwmap(ii,jj) == 1 && Ans(ii,jj) == 0)
