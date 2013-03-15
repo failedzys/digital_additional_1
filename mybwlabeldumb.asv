@@ -1,0 +1,6 @@
+function [ Ans ] = mybwlabeldumb( bwmap )
+[n,m] = size(bwmap);
+
+
+end
+
